@@ -6,7 +6,7 @@
  * @brief Store all the Engines and control them to play a music.
  * @version 1.0
  * @date 2023-07-23
- * @details This archive contains the class "EngineSet" used to create the magic guitar.
+ * @details This archive contains the class 'EngineSet', used to create the magic guitar.
  It store all the Engines and control them using the SD card data to play a music.
  * @authors CPE - Consultoria e Projetos Elétricos
  */
@@ -73,14 +73,20 @@ public:
 
     /**
     * @brief Reset an Engine.
-    * @param pGuitarReset Position of the Engine.
+    * @param pGuitarReset Engine position in mEngines.
     * @param pSignal Direction to reset the Engine (up or down).
     */
     void playOneStep(int pGuitarReset, int pSignal); // reseta o motor selecionado
 
+    /**
+    * @brief Save the Engines' position on the SD card.
+    * @param pSD SD Card.
+    */
     void getEnginePos(SDCard pSd);
 
-    
+    /**
+    * @brief Sets the opposition after a music.
+    */
     void endMusic(); //Configura oposição após cada música
 
     /**
@@ -103,21 +109,56 @@ public:
 
     void setCurrentTarget(String pcurrentTargets);
 
+    /**
+    * @brief Spin a Engine a half of his target.
+    * @param pGuitarStringReset Engine position in mEngines.
+    */
     void runHalfTarget(int pGuitarStringReset);
 
+    /**
+    * @brief Vector of Engine positions.
+    */
     std::vector<int> mEnginePos;
 
 private:
+    /**
+    * @brief Vector of Magic Guitar Engines.
+    */
     std::vector<Engine *> mEngines;
+
+    /**
+    * @brief Vector of Engines to play a music.
+    */
     std::vector<Engine *> mEnginesToPlay;
+
     // int mExitLoop;
     // int mButtonUpState;
     // int mButtonSelectState;
     // int mButtonDownState;
+
+    /**
+    * @brief Engines BPM speed.
+    */
     float mBPMSpeed; 
+
+    /**
+    * @brief Music subdivision.
+    */
     string mSubdivision;
+
+    /**
+    * @brief Global Engine Targets.
+    */
     int mGlobalTargets;
+
+    /**
+    * @brief Delay in miliseconds.
+    */
     int mDelayMilis;
+
+    /**
+    * @brief Delay in microseconds.
+    */
     int mDelayMicro;
 };
 

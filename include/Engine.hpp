@@ -6,7 +6,7 @@
  * @brief Control and store a step-enginer.
  * @version 1.0
  * @date 2023-07-23
- * @details This archive contains the class "Engine" used to control individually and store a step-enginer of the Magic Guitar.
+ * @details This archive contains the class 'Engine', used to control individually and store a step-enginer of the Magic Guitar.
  * @authors CPE - Consultoria e Projetos Elétricos
  */
 
