@@ -5,7 +5,7 @@
  * @file SDCard.hpp
  * @brief Control the SD Card.
  * @version 1.0
- * @date 2023-07-23
+ * @date 2023-07-28
  * @details This archive contains the class 'SDCard', used to control the SD Card that stores the musics and data.
  * @authors CPE - Consultoria e Projetos Elétricos
  */
@@ -31,12 +31,12 @@ public:
     vector<string> getList();
 
     /**
-    * @brief Creates the vector mFilesNames.
+    * @brief Create the vector mFilesNames.
     */
     void Makelist();
 
     /**
-    * @brief Prints the position of an archive.
+    * @brief Prints the position of an archive - used for tests.
     * @param pFileName File name.
     */
     void printPosition(std::string pFileName);
@@ -55,7 +55,7 @@ public:
     void writeInFile(vector<int> pEnginePos);
 
     /**
-    * @brief Returns the current target.
+    * @brief Returns the current targets.
     */
     String getCurrentTarget();
 

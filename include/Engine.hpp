@@ -5,7 +5,7 @@
  * @file Engine.hpp
  * @brief Control and store a step-enginer.
  * @version 1.0
- * @date 2023-07-23
+ * @date 2023-07-28
  * @details This archive contains the class 'Engine', used to control individually and store a step-enginer of the Magic Guitar.
  * @authors CPE - Consultoria e Projetos Elétricos
  */
@@ -25,27 +25,27 @@ public:
     Engine(char pGuitarString, int pStep, int pDir);
 
     /**
-    * @brief Returns the Engine guitar string.
+    * @brief Return the Engine guitar string.
     */
     char getGuitarString();
 
     /**
-    * @brief Returns the Engine target.
+    * @brief Return the Engine target.
     */
     int getTarget();
 
     /**
-    * @brief Returns the Engine DIR pin.
+    * @brief Return the Engine DIR pin.
     */
     int getDir();
 
     /**
-    * @brief Returns the Engine STEP pin.
+    * @brief Return the Engine STEP pin.
     */
     int getStep();
 
     /**
-    * @brief Returns the Engine STEP pin.
+    * @brief Return the Engine STEP pin.
     */
     int getStep();
 
@@ -55,17 +55,17 @@ public:
     void reverseTarget();
 
     /**
-    * @brief Returns the Engine position.
+    * @brief Return the Engine position.
     */
     int getPosition();
 
     /**
-    * @brief Returns the position pointer.
+    * @brief Return the position pointer.
     */
     int *getPosPtr();
 
     /**
-    * @brief Spin the engine one step - used to reset it.
+    * @brief Spin the engine one step - used for reset it.
     */
     void oneStep(int pSignal); // utilizado para resetar o motor
 
@@ -82,7 +82,7 @@ public:
     void setDelaySpeed(int pSDSpeed);
 
     /**
-    * @brief Returns the Engine delay speed.
+    * @brief Return the Engine delay speed.
     */
     int getDelaySpeed();
 
@@ -98,7 +98,7 @@ public:
 
 private:
     /**
-    * @brief Guitar string.
+    * @brief Engine guitar string.
     */ 
     char mGuitarString; // corda
 
